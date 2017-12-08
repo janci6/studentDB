@@ -32,6 +32,37 @@ namespace studentDB
             }
 
 
+            
+            int dlzka = (databaza.zoznamstudentov.Count == 4) ? 4 : -1;
+
+            Console.WriteLine();
+
+
+
+
+
+            kolekce k = new kolekce();
+
+            Console.WriteLine();
+
+            k.naplnfrontu();
+
+            Console.WriteLine();
+
+            k.naplnzasobnik();
+
+            k.naplntabulku();
+
+            
+
+
+
+            
+
+
+            
+
+
 
 
             Console.ReadLine();
