@@ -25,6 +25,11 @@ namespace studentDB
             {
                 Console.WriteLine(s.Meno + "  " + s.Priezvisko + "   " + s.Vek);
             }
+            Console.WriteLine();
+            foreach (Student s in databaza.zoznamstudentov)
+            {
+                Console.WriteLine(s.Meno + "  " + s.Priezvisko + "   " + s.Vek);
+            }
 
 
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace studentDB
         string[] Priezvisko = new string[5] {"Schwarz","Rumel","Rash","Janci","Durchwartzctinghardmen" };
 
         public Student[] polestudentov= new Student[10]; // takto zoberies vsetky veci zo student lebo vracia aj string aj int 
+        public ArrayList zoznamstudentov = new ArrayList();
 
         public void loadstudenti ()
         {
@@ -24,6 +26,8 @@ namespace studentDB
                 student.Vek = nahodnecislo.Next(15, 80);
 
                 polestudentov[i] = student;
+                zoznamstudentov.Add(student);
+                
             }
         }
         public bool Zorad(Student[] polestudentov, out Student[] zoradenepole)
