@@ -10,6 +10,29 @@ namespace studentDB
     {
         static void Main(string[] args)
         {
+            studentskaDB databaza = new studentskaDB();
+            databaza.loadstudenti();
+            Student[] zoradenistudenti;
+            databaza.Zorad(databaza.polestudentov, out zoradenistudenti);
+
+
+            foreach (Student s in zoradenistudenti)
+            {
+                Console.WriteLine(s.Meno + "  " + s.Priezvisko + "   " + s.Vek);
+            }
+            Console.WriteLine();
+            foreach (Student s in databaza.polestudentov)
+            {
+                Console.WriteLine(s.Meno + "  " + s.Priezvisko + "   " + s.Vek);
+            }
+
+
+
+
+            Console.ReadLine();
+
+
+
         }
     }
 }
